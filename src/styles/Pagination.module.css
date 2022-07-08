@@ -1,0 +1,25 @@
+.buttons_container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.button_prev, .button_next{
+  width: 100px;
+  height: 30px;
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.button_prev:hover, .button_next:hover{
+  background-color: var(--color-primary);
+  color: white;
+}

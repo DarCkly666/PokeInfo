@@ -1,0 +1,11 @@
+.filter{
+  width: 100px;
+  height: 30px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+}
+
+.filter option{
+  font-size: 15px;
+}
