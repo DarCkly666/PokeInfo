@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeContext } from "../context/ThemeProvider";
 import Styles from "../styles/Navbar.module.css";
 import Filter from "./Filter";
+import SearchPokemon from "./SearchPokemon";
 
 const Navbar = () => {
   const { theme, setTheme, navColor }: any = React.useContext(ThemeContext);
@@ -27,8 +28,16 @@ const Navbar = () => {
             history.back();
           }}
         ></i>
-        <p className={Styles.navbar_title}>Pokédex</p>
+        <p
+          className={Styles.navbar_title}
+          onClick={() => {
+            window.location.replace("/");
+          }}
+        >
+          Pokédex
+        </p>
       </div>
+      <SearchPokemon />
       <div className={Styles.theme_change_button}>
         <Filter />
         <span onClick={theme_change}>

@@ -6,20 +6,21 @@ import { getColor } from "../utils/colors";
 import Styles from "../styles/PokemonView.module.css";
 import { ThemeContext } from "../context/ThemeProvider";
 import Loading from "../components/MessageScreen";
+import NotFound from "../components/NotFound";
 
 const PokemonView = (): React.ReactElement => {
   const { id } = useParams();
   const { theme }: any = React.useContext(ThemeContext);
 
-  const { data, loading, error } = useFetch(
-    `https://pokeapi.co/api/v2/pokemon/${id}/`,
-    {}
-  );
+  const {
+    data,
+    loading = true,
+    error,
+  } = useFetch(`https://pokeapi.co/api/v2/pokemon/${id}/`, undefined);
 
-  if (loading) return <Loading />;
+  if (loading) return <Loading message="Loading..." />;
 
-  if (error) return <h2>Error {error}</h2>;
-
+  if (error) return <NotFound />;
   return (
     <div className={`${Styles.pokemoview_container} bg-${theme}`}>
       <h1 className={`${Styles.pokemoview_name} text-${theme}`}>

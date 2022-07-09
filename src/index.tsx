@@ -8,6 +8,7 @@ import PokemonView from "./views/PokemonView";
 import Navbar from "./components/Navbar";
 import FilterProvider from "./context/FilterProvider";
 import ThemeProvider from "./context/ThemeProvider";
+import NotFound from "./components/NotFound";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,7 +21,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/pokemon/:id" element={<PokemonView />} />
-          <Route path="*" element={<h2>404</h2>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </FilterProvider>

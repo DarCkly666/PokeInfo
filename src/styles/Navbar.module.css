@@ -18,6 +18,7 @@
   color: aliceblue;
   font-weight: bold;
   font-size: 22px;
+  cursor: pointer;
 }
 
 .navbar_left{

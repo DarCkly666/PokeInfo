@@ -21,7 +21,7 @@ const INTIAL_STATE = {
 const PokemonContainer = () => {
   const { filter, url, setUrl }: any = useContext(FilterContext);
   const { theme }: any = useContext(ThemeContext);
-  const { data, loading, error } = useFetch(url, INTIAL_STATE);
+  const { data, loading = true, error } = useFetch(url, INTIAL_STATE);
 
   const Pokemon = lazy(() => import("../components/Pokemon"));
 

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import Stats from "./Stats";
 
 const Pokemon = ({ pokemon }: any): React.ReactElement => {
-  const { data, loading, error } = useFetch(pokemon.url, {});
+  const { data, loading = true, error } = useFetch(pokemon.url, {});
 
   if (loading)
     return <PlaceholderLoading shape="rect" width={120} height={180} />;
