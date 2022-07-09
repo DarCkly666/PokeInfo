@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 25px;
 }
 
 .button_prev, .button_next{

@@ -20,7 +20,15 @@ const Navbar = () => {
 
   return (
     <nav className={`nav-${theme} ${Styles.navbar}`} style={bgColor}>
-      <p className={Styles.navbar_title}>Pokédex</p>
+      <div className={Styles.navbar_left}>
+        <i
+          className="fa-solid fa-arrow-left"
+          onClick={() => {
+            history.back();
+          }}
+        ></i>
+        <p className={Styles.navbar_title}>Pokédex</p>
+      </div>
       <div className={Styles.theme_change_button}>
         <Filter />
         <span onClick={theme_change}>
