@@ -9,7 +9,6 @@ type Item = {
   url: string;
 };
 const SearchPokemon = () => {
-  const [query, setQuery] = useState("");
   const { data, loading, error } = useFetch(URL, {});
   const [fetchData, setFetchData] = useState(true);
 

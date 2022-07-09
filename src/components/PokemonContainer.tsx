@@ -10,6 +10,7 @@ import PlaceholderLoading from "react-placeholder-loading/";
 import Styles from "../styles/PokemonContainer.module.css";
 import { ThemeContext } from "../context/ThemeProvider";
 import MessageScreen from "./MessageScreen";
+import SearchPokemon from "./SearchPokemon";
 
 const INTIAL_STATE = {
   count: null,
@@ -33,6 +34,7 @@ const PokemonContainer = () => {
 
   return (
     <div className={`${Styles.pokemon_container} bg-${theme}`}>
+      <SearchPokemon />
       {filter === "all" && (
         <Pagination next={data.next} prev={data.previous} setUrl={setUrl} />
       )}
