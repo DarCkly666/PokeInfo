@@ -1,6 +1,6 @@
 .navbar{
   width: 100%;
-  height: 50px;
+  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
@@ -40,12 +40,12 @@
   display: flex;
   align-items: center;
 }
-.theme_change_button i{
+.theme_change_button i, .fa-magnifying-glass{
   font-size: 20px;
   color: white;
 }
 
-.theme_change_button span{
+.theme_change_button span, .theme_change_button i{
   margin-left: 15px;
   cursor: pointer;
 }

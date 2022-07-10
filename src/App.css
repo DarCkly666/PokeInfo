@@ -19,6 +19,8 @@
   color: var(--color-text-ligth);
 }
 
+.text-accent {color: #4169e1};
+
 .nav-ligth, .footer-ligth{
   background-color: #4169e1;
 }

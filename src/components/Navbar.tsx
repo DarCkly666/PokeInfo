@@ -1,10 +1,16 @@
 import React from "react";
+import { createPortal } from "react-dom";
 import { ThemeContext } from "../context/ThemeProvider";
+import { FilterContext } from "../context/FilterProvider";
 import Styles from "../styles/Navbar.module.css";
 import Filter from "./Filter";
+import SearchPokemon from "./SearchPokemon";
 
 const Navbar = () => {
   const { theme, setTheme, navColor }: any = React.useContext(ThemeContext);
+  const { isOpenSearch, setIsOpenSearch }: any =
+    React.useContext(FilterContext);
+  //const [isOpen, setIsOpen] = React.useState(false);
 
   const theme_change = () => {
     if (theme === "ligth") {
@@ -45,7 +51,17 @@ const Navbar = () => {
             <i className="fa-solid fa-sun"></i>
           )}
         </span>
+        <i
+          className="fa-solid fa-magnifying-glass"
+          onClick={() => {
+            setIsOpenSearch(true);
+          }}
+        ></i>
       </div>
+      <SearchPokemon
+        isOpenSearch={isOpenSearch}
+        setIsOpenSearch={setIsOpenSearch}
+      />
     </nav>
   );
 };
