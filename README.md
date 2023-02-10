@@ -1,3 +1,3 @@
 # PokéInfo
 
-[View](https://my-poke-info.herokuapp.com/).
+[View](https://pokeinfo-ts.netlify.app).

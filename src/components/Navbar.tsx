@@ -1,5 +1,5 @@
 import React from "react";
-import { createPortal } from "react-dom";
+//import { createPortal } from "react-dom";
 import { ThemeContext } from "../context/ThemeProvider";
 import { FilterContext } from "../context/FilterProvider";
 import Styles from "../styles/Navbar.module.css";

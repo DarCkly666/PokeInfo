@@ -94,7 +94,7 @@ const SearchPokemon = ({
               Nothing found
             </h2>
           ) : (
-            filtered.map(function (item: Item, index: number) {
+            filtered.map(function (item: Item) {
               return <Pokemon key={item.name} searched={true} pokemon={item} />;
             })
           )}
